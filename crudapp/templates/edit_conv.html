@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=MonteCarlo&family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <title>Softy Pinko - Bootstrap 4.0 Theme</title>
+        <!--
+            SOFTY PINKO
+            https://templatemo.com/tm-535-softy-pinko
+            -->
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/templatemo-softy-pinko.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/css/bootstrap-icons.css') }}" />
+    </head>
+    <body>
+        <section class="section colored" id="contact-us" style="background-color: #f5f3ed; position: relative; display: flex; flex-direction: column; align-items: center;; overflow-x: hidden; min-height: 83vh; position: relative;">
+            <div class="topnav" id="myTopnav" style="position: absolute; align-self: center;">
+                <div style="float:right">
+                   <a href="../#mensagem">Mensagens para os noivos</a>
+                   <a href="edit_conv">Editar presença</a>
+                   <a href="../#section_4">Fotos</a>
+                   <a href="../#contact-us" class="active">Confirmar presença</a>
+                   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                      <i class="fa fa-bars"></i>
+                   </a>
+                </div>
+              </div> 
+            <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Edite o status do seu comparecimento ou ausência!</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                     <p>17h Cerimônia religiosa: Paróquia São Camilo de Léllis, EQS 303/304.
+                        <br>Recepção: Salão de festas Master C, Park Sul Prime Residence
+                     </p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <form id="contact" method="post" action='{{url_for("edit_conv")}}'>
+                           <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <input name="id_tel" type="text" class="form-control" autocomplete="on" id="email" placeholder="Telefone (somente os números)*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <label class="radio-container">Estarei lá!
+                                       <input type="radio"  name="conf" value="1" onchange="comparecer()">
+                                       <span class="radio-checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">Não vou poder comparecer
+                                       <input type="radio" name="conf" checked="checked" value="0" onchange="comparecer()">
+                                       <span class="radio-checkmark"></span>
+                                    </label>
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="doc" style="display: none;">
+                                 <fieldset>
+                                    <br>
+                                    <input name="doc" type="text" class="form-control" placeholder="Documento (somente os números)*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <div class="row">                     
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia" style="display: none;">
+                                 <fieldset>
+                                    <p><br> Possui alguma restrição alimentar? </p><br>
+                                       <label for="diabete" class="checkbox-container"> Diabetes 
+                                          <input type="checkbox" name="rest_alim" value="diabete " id="diabete">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="lactose" class="checkbox-container"> Intolerância a lactose
+                                          <input type="checkbox" name="rest_alim" value="lactose " id="lactose">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="gluten" class="checkbox-container"> Intolerância a glúten
+                                          <input type="checkbox" name="rest_alim" value="gluten " id="gluten">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="veg" class="checkbox-container"> Vegetariano
+                                          <input type="checkbox" name="rest_alim" value="veg " id="veg">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="vegan" class="checkbox-container"> Vegano
+                                          <input type="checkbox" name="rest_alim" value="vegan " id="vegan">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="acomp" style="display: none;">
+                                 <fieldset>
+                                       <p for="#acomp" name="radio-acomp"><br> Vai levar algum acompanhante? </p><br>
+                                       <label for="nenhum" class="radio-container">0
+                                          <input type="radio" name="acomp" id="nenhum" checked="checked" value="0" onchange="convs()">
+                                          <span class="radio-checkmark"></span>
+                                       </label>
+                                       <label for"um" class="radio-container">1
+                                          <input type="radio" name="acomp" id="um" value="1" onchange="convs()">
+                                          <span class="radio-checkmark" ></span>
+                                       </label>
+                                       <label for="dois" class="radio-container">2
+                                          <input type="radio"  name="acomp" id="dois" value="2" onchange="convs()">
+                                          <span class="radio-checkmark"></span>
+                                       </label>
+                                       <label for="tres" class="radio-container">3
+                                          <input type="radio" name="acomp" id="tres" value="3" onchange="convs()">
+                                          <span class="radio-checkmark" ></span>
+                                       </label>
+                                       <br>
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <div id="conv1" style="display: none;">
+                              <br>
+                              <div class="row">
+                                 <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                       <input name="nome1" type="text" class="form-control" id="name1" placeholder="Nome do acompanhante 1*">
+                                    </fieldset>
+                                 </div>
+                                 <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                       <input name="id_tel1" type="text" class="form-control" id="email1" placeholder="Telefone (somente os números)*">
+                                    </fieldset>
+                                 </div>
+                              </div>
+                              <div class="row">                   
+                                 <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia1">
+                                    <fieldset>
+                                       <p><br> Possui alguma intolerância alimentar? </p><br>
+                                       <label for="diabete1" class="checkbox-container"> Diabetes
+                                          <input type="checkbox" name="rest_alim1" value="diabete " id="diabete1">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="lactose1" class="checkbox-container"> Intolerância a lactose
+                                          <input type="checkbox" name="rest_alim1" value="lactose " id="lactose1">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="gluten1" class="checkbox-container"> Intolerância a glúten
+                                          <input type="checkbox" name="rest_alim1" value="gluten " id="gluten1">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="veg1" class="checkbox-container"> Vegetariano
+                                          <input type="checkbox" name="rest_alim1" value="veg " id="veg1">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="vegan1" class="checkbox-container"> Vegano
+                                          <input type="checkbox" name="rest_alim1" value="vegan " id="vegan1">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                    </fieldset>
+                                 </div>
+                                 <div class="col-lg-6 col-md-12 col-sm-12" id="doc1">
+                                    <fieldset>
+                                       <br>
+                                       <input name="doc1" type="text" class="form-control" placeholder="Documento*">
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="conv2" style="display: none;">
+                              <br>
+                              <div class="row">
+                                 <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                       <input name="nome2" type="text" class="form-control" id="name2" placeholder="Nome do acompanhante 2*">
+                                    </fieldset>
+                                 </div>
+                                 <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                       <input name="id_tel2" type="text" class="form-control" id="email2" placeholder="Telefone (somente os números)*">
+                                    </fieldset>
+                                 </div>
+                              </div>
+                              <div class="row">                   
+                                 <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia2">
+                                    <fieldset>
+                                       <p><br> Possui alguma intolerância alimentar? </p><br>
+                                       <label for="diabete2" class="checkbox-container"> Diabetes
+                                          <input type="checkbox" name="rest_alim2" value="diabete " id="diabete2">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="lactose2" class="checkbox-container"> Intolerância a lactose
+                                          <input type="checkbox" name="rest_alim2" value="lactose " id="lactose2">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="gluten2" class="checkbox-container"> Intolerância a glúten
+                                          <input type="checkbox" name="rest_alim2" value="gluten " id="gluten2">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="veg2" class="checkbox-container"> Vegetariano
+                                          <input type="checkbox" name="rest_alim2" value="veg " id="veg2">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="vegan2" class="checkbox-container"> Vegano
+                                          <input type="checkbox" name="rest_alim2" value="vegan " id="vegan2">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                    </fieldset>
+                                 </div>
+                                 <div class="col-lg-6 col-md-12 col-sm-12" id="doc2">
+                                    <fieldset>
+                                       <br>
+                                       <input name="doc2" type="text" class="form-control" placeholder="Documento*">
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="conv3" style="display: none;">
+                              <br>
+                              <div class="row">
+                                 <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                       <input name="nome3" type="text" class="form-control" id="name3" placeholder="Nome do acompanhante 3*">
+                                    </fieldset>
+                                 </div>
+                                 <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                       <input name="id_tel3" type="text" class="form-control" id="email3" placeholder="Telefone (somente os números)*">
+                                    </fieldset>
+                                 </div>
+                              </div>
+                              <div class="row">                   
+                                 <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia3">
+                                    <fieldset>
+                                       <p><br> Possui alguma intolerância alimentar? </p><br>
+                                       <label for="diabete3" class="checkbox-container"> Diabetes
+                                          <input type="checkbox" name="rest_alim3" value="diabete " id="diabete3">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="lactose3" class="checkbox-container"> Intolerância a lactose
+                                          <input type="checkbox" name="rest_alim3" value="lactose " id="lactose3">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="gluten3" class="checkbox-container"> Intolerância a glúten
+                                          <input type="checkbox" name="rest_alim3" value="gluten " id="gluten3">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="veg3" class="checkbox-container"> Vegetariano
+                                          <input type="checkbox" name="rest_alim3" value="veg " id="veg3">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                       <label for="vegan3" class="checkbox-container"> Vegano
+                                          <input type="checkbox" name="rest_alim3" value="vegan " id="vegan3">
+                                          <span class="checkmark"></span>
+                                       </label>
+                                    </fieldset>
+                                 </div>
+                                 <div class="col-lg-6 col-md-12 col-sm-12" id="doc3">
+                                    <fieldset>
+                                       <br>
+                                       <input name="doc3" type="text" class="form-control" placeholder="Documento*">
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="text-center">
+                              <br><br>
+                              <button type="submit" id="form-submit" class="main-button" style="z-index: 1;">Enviar</button>
+                           </div>
+                        </form>
+                        <script>
+                            function comparecer(){
+                            var x = 0;
+                            if (document.querySelector('input[name="conf"]:checked').value == 1){
+                                if (x == 0){
+                                    opcao = document.getElementById("nenhum");
+                                    opcao.checked = true;
+                                }
+                                document.getElementById("doc").style.display="block"; 
+                                document.getElementById("intolerancia").style.display="block";
+                                document.getElementById("acomp").style.display="block"; 
+                                x = 1;
+                            } else {
+                                document.getElementById("doc").style.display="none"; 
+                                document.getElementById("intolerancia").style.display="none";
+                                document.getElementById("acomp").style.display="none"; 
+                                document.getElementById("conv1").style.display="none"; 
+                                document.getElementById("conv2").style.display="none";
+                                document.getElementById("conv3").style.display="none";
+                                x = 0; 
+                            }
+                            }
+
+                            function convs(){
+                            if (document.querySelector('input[name="acomp"]:checked').value == 1){
+                                document.getElementById("conv1").style.display="block"; 
+                                document.getElementById("conv2").style.display="none";
+                                document.getElementById("conv3").style.display="none"; 
+                            } else if (document.querySelector('input[name="acomp"]:checked').value == 2){
+                                document.getElementById("conv1").style.display="block"; 
+                                document.getElementById("conv2").style.display="block"; 
+                                document.getElementById("conv3").style.display="none"; 
+                            } else if (document.querySelector('input[name="acomp"]:checked').value == 3){
+                                document.getElementById("conv1").style.display="block"; 
+                                document.getElementById("conv2").style.display="block";
+                                document.getElementById("conv3").style.display="block"; 
+                            } else if (document.querySelector('input[name="acomp"]:checked').value == 0){
+                                document.getElementById("conv1").style.display="none"; 
+                                document.getElementById("conv2").style.display="none";
+                                document.getElementById("conv3").style.display="none"; 
+                            }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Contact Form End ***** -->
+        </section>
+              <!-- ***** Footer Start ***** -->
+        <footer>
+            <div class="container" >
+                <div class="row">
+                    <div class="col-lg-12" style="bottom:0px; left: 0px; right: 0px; background-color: #395e35; width: 100vw;">
+                        <p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo <br>
+                            Copyright © Barista Cafe 2048 - Design: 
+                            <a class="copyright-link" rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate<br></a>
+                            <a class="copyright-link" href="https://www.freepik.com/free-vector/hand-painted-watercolor-pressed-flowers-pattern_88472824.htm#query=realistic%20flowers%20pattern%20overlay&position=18&from_view=search&track=ais&uuid=e6f049ad-736e-414e-b257-b791e4b94f2b">Image by mariadetarosarinda</a> on Freepik
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="assets/js/jquery-2.1.0.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Plugins -->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/imgfix.min.js"></script> 
+        <!-- Global Init -->
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>

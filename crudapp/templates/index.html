@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="pt">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="../static/css/images/props/logo.png">
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=MonteCarlo&family=Playfair+Display&family=Raleway:wght@200&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+	  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+	  <title>Mario e Erika - Bodas de Prata</title>
+      <!--
+         SOFTY PINKO
+         https://templatemo.com/tm-535-softy-pinko
+         -->
+      <!-- Additional CSS Files -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='/css/templatemo-softy-pinko.css') }}" />
+   </head>
+   <body>
+      <!-- ***** Header Area Start ***** -->      
+       <script>
+         function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+            x.className += " responsive";
+            } else {
+            x.className = "topnav";
+            }
+         }
+       </script>
+       <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+      <!-- ***** Header Area End ***** -->
+      <!-- ***** Welcome Area Start ***** -->
+      <div class="welcome-area" id="welcome">
+         <!-- ***** Header Text Start ***** -->
+         <div class="topnav" id="myTopnav">
+            <div style="float:right">
+               <a href="#mensagem">Deixe uma mensagem para nós!</a>
+               <a href="#section_4">Fotos</a>
+               <a href="edit_conv">Editar presença</a>
+               <a href="#contact-us" class="active">Confirmar presença</a>
+               <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+               </a>
+            </div>
+          </div> 
+         <div class="header-text">
+            <div class="container">
+               <div class="row">
+                  <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                     <h1>MARIO E ERIKA</h1>
+                     <h2>Bodas de Prata</h2>
+                     <p>13/07/2024</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- ***** Header Text End ***** -->
+         <div class="col-lg-6 col-12 mx-auto" id="botoes-principal">
+            <a class="btn custom-btn custom-border-btn smoothscroll me-3" style="text-shadow: 5px 4px 11px rgb(0,0,0), 0 2px 5px rgb(0,0,0);" href="#section_4">
+               Nossa história
+            </a>
+            <a class="btn custom-btn smoothscroll me-2 mb-2" href="#contact-us"><strong>Confirmação</strong></a>
+         </div>
+      </div>
+      <!-- ***** Welcome Area End ***** -->
+
+      <section class="reviews-section section-padding section-bg" id="section_4">
+         <div class="container">
+             <div class="row justify-content-center">
+                 <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                     <em class="text-white">História dos nossos</em>
+
+                     <h2 class="text-white">25 anos de casados</h2>
+                 </div>
+
+                 <div class="timeline">
+                     <div class="timeline-container timeline-container-left">
+                        <div class="timeline-content">
+                           <div class="reviews-block js-flickity" data-flickity-options='{ "wrapAround": true, "imagesLoaded": true }'>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.1.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.2.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.3.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.4.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.5.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.6.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.7.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.8.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.9.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.10.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.11.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/1.12.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                           </div>
+                           <div class="reviews-block-info" style="width: 100%; word-wrap:normal">
+                              <i> Saindo do Ninho<br>
+                                 (1996-2001)
+                                 <br><br></i>
+                              <i style="font-size: 14px"> 
+                              <strong>Conquistas:</strong> um ao outro, a UnB, o BB, a UFPE e a 1ª promoção <br>
+                              <strong>Despedidas:</strong> bisa Penha, vovó Zelia, Brasília <br>
+                              <strong>Presentes:</strong><span id="dots1"> ... </span><span id="more1"> casamento, Talita, Zelinha <br>
+                              <strong>Novos </strong>Rumos: Recife <br>
+                              <strong>Viagens:</strong> Recife, Brasília, Goiânia <br>
+                              <strong>Crescimento:</strong> maternidade/paternidade, finitude</span>
+                              </i>
+                              <a href="javascript:;" onclick="lerMais1()" id="myBtn1" style="color: #395e35"><u> Ler mais</u></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="timeline-container timeline-container-right">
+                        <div class="timeline-content">
+                           <div class="reviews-block js-flickity" data-flickity-options='{ "wrapAround": true, "imagesLoaded": true }'>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.1.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.2.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.3.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.4.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.5.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.6.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.7.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.8.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.9.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.10.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.11.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/2.12.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                           </div>
+                           <div class="reviews-block-info" style="width: 100%">
+                              <i> Aprendendo a Voar<br>
+                                 (2002-2010)
+                                 <br><br></i>
+                              <i style="font-size: 14px"> 
+                                 <strong>Conquistas:</strong> Mais Vida, graduação, especialização, promoções <br>
+                                 <strong>Despedidas:</strong> Recife João Pessoa <br>
+                                 <strong>Presentes:</strong><span id="dots2"> ... </span><span id="more2"> Leca, Debby, Ritinha, Lulu, Amanda, Bebela, Malu, Pequena, Família de 8 <br>
+                                 <strong>Novos Rumos:</strong> João Pessoa, Brasília <br>
+                                 <strong>Viagens:</strong> Rio, São Paulo, Gramado, Belém, Goiânia, Recife <br>
+                                 <strong>Crescimento:</strong> Ágape <br></span>
+                              </i>
+                              <a href="javascript:;" onclick="lerMais2()" id="myBtn2" style="color: #395e35"> <u>Ler mais</u></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="timeline-container timeline-container-left">
+                        <div class="timeline-content">
+                           <div class="reviews-block js-flickity" data-flickity-options='{ "wrapAround": true, "imagesLoaded": true }'>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.1.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.2.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.3.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.4.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.5.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.6.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.7.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.8.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.9.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.10.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.11.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/3.12.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                           </div>
+                           <div class="reviews-block-info" style="width: 100%">
+                              <i> Voando Alto<br>
+                                 (2011-2017)
+                                 <br><br></i>
+                              <i style="font-size: 14px"> 
+                                 <strong>Conquistas:</strong> mestrados, Ceub, promoções <br>
+                                 <strong>Despedidas:</strong> vovó Anísia, tio Waldir, tio Buan, tio Dedé, Brasília <br>
+                                 <strong>Presentes:</strong><span id="dots3"> ... </span><span id="more3"> Edu, Juju, intercâmbios <br>
+                                 <strong>Novos Rumos:</strong> São Paulo <br>
+                                 <strong>Viagens:</strong> Canadá, Foz, Paraguai, Argentina, Belém, Curitiba, Floripa, Palmas, Gramado, Recife, Goiânia <br>
+                                 <strong>Crescimento:</strong> Encontro atrimonial (EMM), doença Tatá <br></span>
+                              </i>
+                              <a href="javascript:;" onclick="lerMais3()" id="myBtn3" style="color: #395e35"> <u>Ler mais</u></a>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="timeline-container timeline-container-right">
+                        <div class="timeline-content">
+                           <div class="reviews-block js-flickity" data-flickity-options='{ "wrapAround": true, "imagesLoaded": true }'>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.1.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.2.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.3.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.4.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.5.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.6.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.7.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.8.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.9.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.10.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.11.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.12.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.13.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                              <div class="reviews-block-image-wrap d-flex align-items-center">
+                                 <img src="../static/css/images/fotos/4.14.jpg" class="reviews-block-image img-fluid" alt="">
+                              </div>
+                           </div>
+
+                           <div class="reviews-block-info" style="width: 100%">
+                              <i> A Grande Travessia<br>
+                                 (2018-2024)
+                                 <br><br></i>
+                              <i style="font-size: 14px"> 
+                                 <strong>Conquistas:</strong> doutorado, pós EAN, formaturas Tatá e Zelia, promoções BB <br>
+                                 <strong>Despedidas:</strong> vovó Fátima, tia Nira, tia Graça, Tieda, tio Dudú, tia Zuleica, tia Neide, Pequena, tio Guilherme, São Paulo <br>
+                                 <strong>Presentes:</strong><span id="dots4"> ... </span><span id="more4"> Jamili, Família Dylcio, Família Fáu <br>
+                                 <strong>Novos Rumos:</strong> Brasília <br>
+                                 <strong>Viagens:</strong> Canadá, França, Itália, Curitiba, Floripa, Belém, Recife, João Pessoa, Natal, Goiânia, Interior e Litoral de SP <br>
+                                 <strong>Crescimento:</strong> Covid e doenças da Zelia, do vovô Mario e do querido (Mario) <br></span>
+                              </i>
+                              <a href="javascript:;" onclick="lerMais4()" id="myBtn4" style="color: #395e35"> <u>Ler mais</u> </a>
+                           </div>
+                        </div>
+                    </div>
+
+                    <script>
+                     function lerMais1() {
+                        var dots = document.getElementById("dots1");
+                        var moreText = document.getElementById("more1");
+                        var btnText = document.getElementById("myBtn1");
+                      
+                        if (dots.style.display === "none") {
+                          dots.style.display = "inline";
+                          btnText.innerHTML = "<u>Ler mais</u>";
+                          moreText.style.display = "none";
+                        } else {
+                          dots.style.display = "none";
+                          btnText.innerHTML = "   <u>Ler menos</u>";
+                          moreText.style.display = "inline";
+                        }
+                      }
+
+                      function lerMais2() {
+                        var dots = document.getElementById("dots2");
+                        var moreText = document.getElementById("more2");
+                        var btnText = document.getElementById("myBtn2");
+                      
+                        if (dots.style.display === "none") {
+                          dots.style.display = "inline";
+                          btnText.innerHTML = "<u>Ler mais</u>";
+                          moreText.style.display = "none";
+                        } else {
+                          dots.style.display = "none";
+                          btnText.innerHTML = "   <u>Ler menos</u>";
+                          moreText.style.display = "inline";
+                        }
+                      }
+
+                      function lerMais3() {
+                        var dots = document.getElementById("dots3");
+                        var moreText = document.getElementById("more3");
+                        var btnText = document.getElementById("myBtn3");
+                      
+                        if (dots.style.display === "none") {
+                          dots.style.display = "inline";
+                          btnText.innerHTML = "<u>Ler mais</u>";
+                          moreText.style.display = "none";
+                        } else {
+                          dots.style.display = "none";
+                          btnText.innerHTML = "   <u>Ler menos</u>";
+                          moreText.style.display = "inline";
+                        }
+                      }
+
+                      function lerMais4() {
+                        var dots = document.getElementById("dots4");
+                        var moreText = document.getElementById("more4");
+                        var btnText = document.getElementById("myBtn4");
+                      
+                        if (dots.style.display === "none") {
+                          dots.style.display = "inline";
+                          btnText.innerHTML = "<u>Ler mais</u>";
+                          moreText.style.display = "none";
+                        } else {
+                          dots.style.display = "none";
+                          btnText.innerHTML = "   <u>Ler menos</u>";
+                          moreText.style.display = "inline";
+                        }
+                      }
+                    </script>
+
+                    <div class="timeline-container timeline-container-left">
+                       <div class="timeline-content">
+                          <div class="reviews-block js-flickity" data-flickity-options='{ "wrapAround": true, "imagesLoaded": true }'>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.1.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.2.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.3.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.4.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.5.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.6.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.7.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.8.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.9.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.10.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                           <div class="reviews-block-image-wrap d-flex align-items-center">
+                              <img src="../static/css/images/fotos/5.11.jpg" class="reviews-block-image img-fluid" alt="">
+                           </div>
+                          </div>
+                          <div class="reviews-block-info" style="width: 100%">
+                             <i> Aniversários de Casamento </i>
+                          </div>
+                       </div>
+                    </div>
+
+                 </div>
+             </div>
+         </div>
+     </section>
+
+      <!-- ***** Contact Us Start ***** -->
+      <section class="section colored" id="contact-us" style="background-color: #f5f3ed">
+         <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="center-heading">
+                     <h2 class="section-title">Confirme seu comparecimento ou ausência!</h2>
+                  </div>
+               </div>
+               <div class="offset-lg-3 col-lg-6">
+                  <div class="center-text">
+                     <p>17h Cerimônia religiosa: Paróquia São Camilo de Léllis, EQS 303/304.
+                        <br>Recepção: Salão de festas Master C, Park Sul Prime Residence
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+            <div class="row">
+               <div class="col-lg-4 col-md-6 col-sm-12">
+                  <h5 class="margin-bottom-30">IMPORTANTE</h5>
+                  <div class="contact-text">
+                     <p>Pense com carinho, sua presença é muito importante para nós!!!
+                      <br>Segurança do condomínio - não será permitido o acesso de pessoas (inclusive crianças) não listadas na portaria, então, não deixe de informar quem irá com você!!!
+                      <br>Para nossa organização, como o número de convites é limitado, confirme quando houver convicção da presença!!!
+                      <br>Se não puder comparecer, por favor, indique a ausência, também para melhor organização do momento!!!
+                      <br>Muito obrigado!!!
+                     </p>
+                  </div>
+               </div>
+               <!-- ***** Contact Form Start ***** -->
+               <div class="col-lg-8 col-md-6 col-sm-12">
+                  <div class="contact-form">
+                     <form id="contact" method="post" action='{{url_for("index")}}'>
+                        <div class="row">
+                           <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                 <input name="nome" type="text" class="form-control" autocomplete="on" id="name" placeholder="Nome completo*">
+                              </fieldset>
+                           </div>
+                           <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                 <input name="id_tel" type="text" class="form-control" autocomplete="on" id="email" placeholder="Telefone (somente os números)*">
+                              </fieldset>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                 <label class="radio-container">Estarei lá!
+                                    <input type="radio"  name="conf" value="1" onchange="comparecer()">
+                                    <span class="radio-checkmark"></span>
+                                 </label>
+                                 <label class="radio-container">Não vou poder comparecer
+                                    <input type="radio" name="conf" checked="checked" value="0" onchange="comparecer()">
+                                    <span class="radio-checkmark"></span>
+                                 </label>
+                              </fieldset>
+                           </div>
+                           <div class="col-lg-6 col-md-12 col-sm-12" id="doc" style="display: none;">
+                              <fieldset>
+                                 <br>
+                                 <input name="doc" type="text" class="form-control" placeholder="Documento (somente os números)*">
+                              </fieldset>
+                           </div>
+                        </div>
+                        <div class="row">                     
+                           <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia" style="display: none;">
+                              <fieldset>
+                                 <p><br> Possui alguma restrição alimentar? </p><br>
+                                    <label for="diabete" class="checkbox-container"> Diabetes 
+                                       <input type="checkbox" name="rest_alim" value="diabete " id="diabete">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="lactose" class="checkbox-container"> Intolerância a lactose
+                                       <input type="checkbox" name="rest_alim" value="lactose " id="lactose">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="gluten" class="checkbox-container"> Intolerância a glúten
+                                       <input type="checkbox" name="rest_alim" value="gluten " id="gluten">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="veg" class="checkbox-container"> Vegetariano
+                                       <input type="checkbox" name="rest_alim" value="veg " id="veg">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="vegan" class="checkbox-container"> Vegano
+                                       <input type="checkbox" name="rest_alim" value="vegan " id="vegan">
+                                       <span class="checkmark"></span>
+                                    </label>
+                              </fieldset>
+                           </div>
+                           <div class="col-lg-6 col-md-12 col-sm-12" id="acomp" style="display: none;">
+                              <fieldset>
+                                    <p for="#acomp" name="radio-acomp"><br> Vai levar algum acompanhante? </p><br>
+                                    <label for="nenhum" class="radio-container">0
+                                       <input type="radio" name="acomp" id="nenhum" checked="checked" value="0" onchange="convs()">
+                                       <span class="radio-checkmark"></span>
+                                    </label>
+                                    <label for"um" class="radio-container">1
+                                       <input type="radio" name="acomp" id="um" value="1" onchange="convs()">
+                                       <span class="radio-checkmark" ></span>
+                                    </label>
+                                    <label for="dois" class="radio-container">2
+                                       <input type="radio"  name="acomp" id="dois" value="2" onchange="convs()">
+                                       <span class="radio-checkmark"></span>
+                                    </label>
+                                    <label for="tres" class="radio-container">3
+                                       <input type="radio" name="acomp" id="tres" value="3" onchange="convs()">
+                                       <span class="radio-checkmark" ></span>
+                                    </label>
+                                    <br>
+                              </fieldset>
+                           </div>
+                        </div>
+                        <div id="conv1" style="display: none;">
+                           <br>
+                           <div class="row">
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <input name="nome1" type="text" class="form-control" id="name1" placeholder="Nome do acompanhante 1*">
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <input name="id_tel1" type="text" class="form-control" id="email1" placeholder="Telefone (somente os números)*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <div class="row">                   
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia1">
+                                 <fieldset>
+                                    <p><br> Possui alguma intolerância alimentar? </p><br>
+                                    <label for="diabete1" class="checkbox-container"> Diabetes
+                                       <input type="checkbox" name="rest_alim1" value="diabete " id="diabete1">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="lactose1" class="checkbox-container"> Intolerância a lactose
+                                       <input type="checkbox" name="rest_alim1" value="lactose " id="lactose1">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="gluten1" class="checkbox-container"> Intolerância a glúten
+                                       <input type="checkbox" name="rest_alim1" value="gluten " id="gluten1">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="veg1" class="checkbox-container"> Vegetariano
+                                       <input type="checkbox" name="rest_alim1" value="veg " id="veg1">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="vegan1" class="checkbox-container"> Vegano
+                                       <input type="checkbox" name="rest_alim1" value="vegan " id="vegan1">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="doc1">
+                                 <fieldset>
+                                    <br>
+                                    <input name="doc1" type="text" class="form-control" placeholder="Documento*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="conv2" style="display: none;">
+                           <br>
+                           <div class="row">
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <input name="nome2" type="text" class="form-control" id="name2" placeholder="Nome do acompanhante 2*">
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <input name="id_tel2" type="text" class="form-control" id="email2" placeholder="Telefone (somente os números)*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <div class="row">                   
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia2">
+                                 <fieldset>
+                                    <p><br> Possui alguma intolerância alimentar? </p><br>
+                                    <label for="diabete2" class="checkbox-container"> Diabetes
+                                       <input type="checkbox" name="rest_alim2" value="diabete " id="diabete2">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="lactose2" class="checkbox-container"> Intolerância a lactose
+                                       <input type="checkbox" name="rest_alim2" value="lactose " id="lactose2">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="gluten2" class="checkbox-container"> Intolerância a glúten
+                                       <input type="checkbox" name="rest_alim2" value="gluten " id="gluten2">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="veg2" class="checkbox-container"> Vegetariano
+                                       <input type="checkbox" name="rest_alim2" value="veg " id="veg2">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="vegan2" class="checkbox-container"> Vegano
+                                       <input type="checkbox" name="rest_alim2" value="vegan " id="vegan2">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="doc2">
+                                 <fieldset>
+                                    <br>
+                                    <input name="doc2" type="text" class="form-control" placeholder="Documento*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="conv3" style="display: none;">
+                           <br>
+                           <div class="row">
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <input name="nome3" type="text" class="form-control" id="name3" placeholder="Nome do acompanhante 3*">
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <fieldset>
+                                    <input name="id_tel3" type="text" class="form-control" id="email3" placeholder="Telefone (somente os números)*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <div class="row">                   
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="intolerancia3">
+                                 <fieldset>
+                                    <p><br> Possui alguma intolerância alimentar? </p><br>
+                                    <label for="diabete3" class="checkbox-container"> Diabetes
+                                       <input type="checkbox" name="rest_alim3" value="diabete " id="diabete3">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="lactose3" class="checkbox-container"> Intolerância a lactose
+                                       <input type="checkbox" name="rest_alim3" value="lactose " id="lactose3">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="gluten3" class="checkbox-container"> Intolerância a glúten
+                                       <input type="checkbox" name="rest_alim3" value="gluten " id="gluten3">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="veg3" class="checkbox-container"> Vegetariano
+                                       <input type="checkbox" name="rest_alim3" value="veg " id="veg3">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                    <label for="vegan3" class="checkbox-container"> Vegano
+                                       <input type="checkbox" name="rest_alim3" value="vegan " id="vegan3">
+                                       <span class="checkmark"></span>
+                                    </label>
+                                 </fieldset>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12" id="doc3">
+                                 <fieldset>
+                                    <br>
+                                    <input name="doc3" type="text" class="form-control" placeholder="Documento*">
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="text-center">
+                           <br><br>
+                           <button type="button" id="form-submit" onclick="enviar()" class="main-button" style="z-index: 1;">Enviar</button>
+                        </div>
+                     </form>
+                     <script>
+                        function comparecer(){
+                           var x = 0;
+                           if (document.querySelector('input[name="conf"]:checked').value == 1){
+                              if (x == 0){
+                                 opcao = document.getElementById("nenhum");
+                                 opcao.checked = true;
+                              }
+                              document.getElementById("doc").style.display="block"; 
+                              document.getElementById("intolerancia").style.display="block";
+                              document.getElementById("acomp").style.display="block"; 
+                              x = 1;
+                           } else {
+                              document.getElementById("doc").style.display="none"; 
+                              document.getElementById("intolerancia").style.display="none";
+                              document.getElementById("acomp").style.display="none"; 
+                              document.getElementById("conv1").style.display="none"; 
+                              document.getElementById("conv2").style.display="none";
+                              document.getElementById("conv3").style.display="none";
+                              x = 0; 
+                           }
+                        }
+
+                        function convs(){
+                           if (document.querySelector('input[name="acomp"]:checked').value == 1){
+                              document.getElementById("conv1").style.display="block"; 
+                              document.getElementById("conv2").style.display="none";
+                              document.getElementById("conv3").style.display="none"; 
+                           } else if (document.querySelector('input[name="acomp"]:checked').value == 2){
+                              document.getElementById("conv1").style.display="block"; 
+                              document.getElementById("conv2").style.display="block"; 
+                              document.getElementById("conv3").style.display="none"; 
+                           } else if (document.querySelector('input[name="acomp"]:checked').value == 3){
+                              document.getElementById("conv1").style.display="block"; 
+                              document.getElementById("conv2").style.display="block";
+                              document.getElementById("conv3").style.display="block"; 
+                           } else if (document.querySelector('input[name="acomp"]:checked').value == 0){
+                              document.getElementById("conv1").style.display="none"; 
+                              document.getElementById("conv2").style.display="none";
+                              document.getElementById("conv3").style.display="none"; 
+                           }
+                        }
+
+                        function enviar() {
+                           if ($.active) {
+                              return;
+                           }
+
+                           $.ajax({
+                              method: "post",
+                              url: '{{url_for("index")}}',
+                              data: $("#contact").serialize(),
+                              success: function () {
+                                 alert("Enviado com sucesso!");
+                                 document.getElementById("mensagem").scrollIntoView(true);
+                              },
+                              error: function () {
+                                 alert("Falha ao enviar");
+                              }
+                           });
+                        }
+                     </script>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- ***** Contact Form End ***** -->
+      </section>
+      <!-- ***** Contact Us End ***** -->
+      <section class="welcome-area" id="mensagem" style="background-image: url('../static/css/images/fotos/plantas.jpg')">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="center-heading">
+                     <h2 class="section-title" style="color: #fff; text-shadow: 5px 4px 11px rgb(0,0,0), 0 2px 5px rgb(0,0,0);"><br><br><br>Se desejar, deixe uma mensagem para o casal <br></h2>
+                  </div>
+               </div>
+            </div>
+            <form method="post" action='{{url_for("mensagem")}}'>
+               <div class="col-lg-12">
+                  <fieldset>
+                     <textarea name="message" rows="6" class="form-control" id="message" placeholder="Não esqueça de assinar!"></textarea>
+                  </fieldset>
+               </div>
+               <div class="text-center align-items-center" id="botao-mensagem" style="width: 100vw; left: 0px">
+                  <a class="btn custom-btn custom-border-btn smoothscroll me-3" style="text-shadow: 5px 4px 11px rgb(0,0,0), 0 2px 5px rgb(0,0,0);" href="#welcome">
+                     Não, obrigado
+                  </a>
+                  <button class="btn custom-btn smoothscroll me-2 mb-2" type="submit"><strong>Enviar mensagem!</strong></button>
+               </div>
+            </form>
+         </div>
+      </section>
+      <!-- ***** Footer Start ***** -->
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo <br>
+                     Copyright © Barista Cafe 2048 - Design: 
+                     <a class="copyright-link" rel="sponsored" href="https://www.tooplate.com" target="_blank">Tooplate<br></a>
+                     <a class="copyright-link" href="https://www.freepik.com/free-vector/hand-painted-watercolor-pressed-flowers-pattern_88472824.htm#query=realistic%20flowers%20pattern%20overlay&position=18&from_view=search&track=ais&uuid=e6f049ad-736e-414e-b257-b791e4b94f2b">Image by mariadetarosarinda</a> on Freepik
+                  </p>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
